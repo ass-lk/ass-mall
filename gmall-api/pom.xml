@@ -11,6 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>gmall-api</artifactId>
+    <packaging>jar</packaging>
 
     <dependencies>
         <!-- 通用mapper -->
@@ -24,6 +25,13 @@
                     <artifactId>spring-boot-starter-jdbc</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!--lombok插件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
         </dependency>
 
     </dependencies>

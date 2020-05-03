@@ -12,7 +12,7 @@
     </parent>
 
     <artifactId>gmall-web-utils</artifactId>
-
+    <packaging>jar</packaging>
     <dependencies>
         <!--公共的工具包-->
         <dependency>
