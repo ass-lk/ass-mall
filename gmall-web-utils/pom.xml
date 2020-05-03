@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>gmall-parent</artifactId>
+        <groupId>com.ass.gmall</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../gmall-parent/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>gmall-web-utils</artifactId>
+
+    <dependencies>
+        <!--公共的工具包-->
+        <dependency>
+            <groupId>com.ass.gmall</groupId>
+            <artifactId>gmall-common-utils</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <!--thymeleaf模板工具-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>
