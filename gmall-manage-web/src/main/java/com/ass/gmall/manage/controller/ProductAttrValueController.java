@@ -2,7 +2,7 @@ package com.ass.gmall.manage.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.ass.gmall.pojo.ProductAttrValue;
-import com.ass.gmall.service.ProductAttrValueService;
+import com.ass.gmall.service.PmsBaseAttrValueService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,21 +14,21 @@ public class ProductAttrValueController {
 
 
     @Reference
-    private ProductAttrValueService productAttrValueService;
+    private PmsBaseAttrValueService pmsBaseAttrValueService;
 
     @GetMapping("/list/{id}")
     public List<ProductAttrValue> listAttrValue(@PathVariable("id") String infoId){
-       return productAttrValueService.listAttrValue(infoId);
+       return pmsBaseAttrValueService.listAttrValue(infoId);
     }
 
     @GetMapping("/get/{id}")
     public ProductAttrValue getAttrValue(@PathVariable("id") String valueId){
-        return productAttrValueService.getValue(valueId);
+        return pmsBaseAttrValueService.getValue(valueId);
     }
 
     @PostMapping("/save")
     public String save(@RequestBody ProductAttrValue productAttrValue){
-        boolean b = productAttrValueService.addAttrValue(productAttrValue);
+        boolean b = pmsBaseAttrValueService.addAttrValue(productAttrValue);
         if(b){
             return "success";
         }

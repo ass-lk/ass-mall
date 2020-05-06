@@ -6,6 +6,9 @@ import com.ass.gmall.pojo.UserReceiveAddress;
 
 import java.util.List;
 
+/**
+ * 用户收获地址抽象接口
+ */
 public interface UserReceiveAddressService {
 
 

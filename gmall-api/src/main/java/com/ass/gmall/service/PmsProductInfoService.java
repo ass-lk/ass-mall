@@ -1,11 +1,15 @@
 package com.ass.gmall.service;
 
 import com.ass.gmall.pojo.PmsBaseSaleAttr;
+import com.ass.gmall.pojo.PmsProductImage;
 import com.ass.gmall.pojo.PmsProductInfo;
+import com.ass.gmall.pojo.PmsProductSaleAttr;
 
 import java.util.List;
 
 public interface PmsProductInfoService {
+
+
 
     /**
      * 根据三级类名id查询商品的列表信息

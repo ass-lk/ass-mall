@@ -1,0 +1,26 @@
+server:
+  port: 8092 # 商品业务层
+spring:
+  ## dubbo相关配置信息
+  dubbo:
+    # dubbo服务的名称
+    application: gmall-item-web
+    # dubbo的通讯协议名称
+    protocol:
+      name: dubbo
+    # 注册中心地址
+    registry:
+      address: 192.168.72.129:2181 # 虚拟机的ip
+      # zookeeper的通讯协议的名称
+      protocol: zookeeper
+    # duboo的服务的扫描路径
+    base-package: com.ass.gmall
+    # 设置超时时间
+    consumer:
+      timeout: 600000
+      # 设置是否检查 服务存在
+      check: false
+# 关闭thymeleaf的缓存(热部署)
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5   # 松校验

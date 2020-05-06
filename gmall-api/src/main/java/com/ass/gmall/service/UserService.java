@@ -6,6 +6,9 @@ import com.ass.gmall.pojo.User;
 
 import java.util.List;
 
+/**
+ * 会员抽象管理抽象接口
+ */
 public interface UserService {
 
     /**

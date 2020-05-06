@@ -3,7 +3,7 @@ package com.ass.gmall.manage.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.ass.gmall.pojo.ProductAttrInfo;
 import com.ass.gmall.pojo.ProductAttrValue;
-import com.ass.gmall.service.ProductAttrInfoService;
+import com.ass.gmall.service.PmsBaseAttrInfoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,26 +14,26 @@ import java.util.List;
 public class ProductAttrInfoController {
 
     @Reference
-    private ProductAttrInfoService productAttrInfoService;
+    private PmsBaseAttrInfoService pmsBaseAttrInfoService;
 
     @GetMapping("/list/{id}")
     public List<ProductAttrInfo> listAttr(@PathVariable("id") String catalog3Id){
-        return productAttrInfoService.getAttrInfo(catalog3Id);
+        return pmsBaseAttrInfoService.getAttrInfo(catalog3Id);
     }
 
     @GetMapping("/listValue/{id}")
     public List<ProductAttrValue> listValue(@PathVariable("id") String infoId){
-        return productAttrInfoService.getValue(infoId);
+        return pmsBaseAttrInfoService.getValue(infoId);
     }
 
     @GetMapping("/get/{id}")
     public ProductAttrInfo getAttr(@PathVariable("id") String id){
-        return productAttrInfoService.getAttrInfoById(id);
+        return pmsBaseAttrInfoService.getAttrInfoById(id);
     }
 
     @PostMapping("/addAttr")
     public String addAttr(@RequestBody ProductAttrInfo info){
-        boolean b = productAttrInfoService.addAttrInfo(info);
+        boolean b = pmsBaseAttrInfoService.addAttrInfo(info);
         if(b){
             return "success";
         }
@@ -42,7 +42,7 @@ public class ProductAttrInfoController {
 
     @PutMapping("/updateAttr")
     public String updateAttr(@RequestBody ProductAttrInfo info){
-        boolean b = productAttrInfoService.updateAttrInfo(info);
+        boolean b = pmsBaseAttrInfoService.updateAttrInfo(info);
         if(b){
             return "success";
         }
@@ -51,7 +51,7 @@ public class ProductAttrInfoController {
 
     @DeleteMapping("/removeAttr/{id}")
     public String removeAttr(@PathVariable("id") String attrInfoId){
-        boolean b = productAttrInfoService.removeAttrInfo(attrInfoId);
+        boolean b = pmsBaseAttrInfoService.removeAttrInfo(attrInfoId);
         if(b){
             return "success";
         }

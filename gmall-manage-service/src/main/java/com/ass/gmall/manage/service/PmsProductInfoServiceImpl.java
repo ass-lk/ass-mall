@@ -47,7 +47,7 @@ public class PmsProductInfoServiceImpl implements PmsProductInfoService {
             List<PmsProductSaleAttrValue> spuSaleAttrValueList = pmsProductSaleAttr.getSpuSaleAttrValueList();
             for (PmsProductSaleAttrValue pmsProductSaleAttrValue : spuSaleAttrValueList) {
                 pmsProductSaleAttrValue.setProductId(info.getId());
-                pmsProductSaleAttrValue.setSaleAttrId(pmsProductSaleAttr.getId());
+                pmsProductSaleAttrValue.setSaleAttrId(pmsProductSaleAttr.getSaleAttrId());
                 pmsProductSaleAttrValueMapper.insert(pmsProductSaleAttrValue);
             }
         }
