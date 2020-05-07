@@ -21,5 +21,7 @@ public interface PmsSkuService {
      * @param skuId
      * @return
      */
-    PmsSkuInfo getSkuInfoById(String skuId);
+    PmsSkuInfo getSkuInfoById(String skuId) ;
+
+    List<PmsSkuInfo> getSkuSaleAttrValueListBySpu(String productId);
 }

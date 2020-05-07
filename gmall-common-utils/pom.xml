@@ -13,7 +13,11 @@
     <artifactId>gmall-common-utils</artifactId>
     <packaging>jar</packaging>
     <dependencies>
-
+        <!--redis客户端-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
         <!--json序列化工具-->
         <dependency>
             <groupId>com.alibaba</groupId>

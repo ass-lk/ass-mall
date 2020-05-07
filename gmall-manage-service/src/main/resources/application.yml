@@ -21,10 +21,16 @@ spring:
       protocol: zookeeper
     # duboo的服务的扫描路径
     base-package: com.ass.gmall
+## 配置redis相关属性
+  redis:
+    host: 192.168.72.129 # 配置主机地址
+    port: 6379 #配置端口信息
+    database: 0 # redis数据库
 ## mybatis相关配置
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   configuration:
     map-underscore-to-camel-case: true
+
 
 
